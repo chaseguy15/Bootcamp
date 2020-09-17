@@ -13,9 +13,14 @@ There are a few ways to go about this:
 - Dual boot. I would recommend dual booting to anyone that wants to familiarize with the full functionality of Linux.
 
 ### WSL
-[WSL 2](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10).
+If you have Windows version 1903 or greater: [WSL 2](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
 
-[WSL 1](http://docs.uavaustin.org/guides/installation/getting-started/windows.html).
+If you have Windows version 1803 or greater (and don't want an easy to use Linux system): [WSL 1](http://docs.uavaustin.org/guides/installation/getting-started/windows.html)
+
+## Git
+Git is used for version control and some documentation of the code.
+
+[UAV Austin Git install page](http://docs.uavaustin.org/guides/installation/git/index.html)
 
 ## Python
 Python is used for the UGV drop code, and is just a generally good language to
