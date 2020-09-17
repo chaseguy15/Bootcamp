@@ -13,8 +13,8 @@ There are a few ways to go about this:
 - Dual boot. I would recommend dual booting to anyone that wants to familiarize with the full functionality of Linux.
 
 ### WSL
-wsl 2 (win10): https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10
-wsl 1 (win): http://docs.uavaustin.org/guides/installation/getting-started/windows.html
+[wsl 2](https://www.omgubuntu.co.uk/how-to-install-wsl2-on-windows-10)
+[wsl 1](http://docs.uavaustin.org/guides/installation/getting-started/windows.html)
 
 ## Python
 Python is used for the UGV drop code, and is just a generally good language to
@@ -30,13 +30,13 @@ sudo apt-get install python3.6
 ## Rust
 Rust is the language of Pathfinder and a great way to learn the fundamentals of programming which can often be overlooked with more dynamic languages.
 
-install: https://www.rust-lang.org/tools/install
+[install](https://www.rust-lang.org/tools/install)
 
-"the book": https://doc.rust-lang.org/book/
-by example: https://doc.rust-lang.org/stable/rust-by-example/index.html
-rustlings: https://github.com/rust-lang/rustlings/
-standard library: https://doc.rust-lang.org/std/index.html
-rust style guide: https://doc.rust-lang.org/1.0.0/style/style/naming/README.html
+- ["The Book"] (https://doc.rust-lang.org/book/)
+- [By example] (https://doc.rust-lang.org/stable/rust-by-example/index.html)
+- [Rustlings] (https://github.com/rust-lang/rustlings/)
+- [Standard library] (https://doc.rust-lang.org/std/index.html)
+- [Rust style guide] (https://doc.rust-lang.org/1.0.0/style/style/naming/README.html)
 
 # Structure
 The tentative schedule of boot camp is as follows:
