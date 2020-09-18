@@ -17,6 +17,15 @@ If you have Windows version 1903 or greater: [WSL 2](https://www.omgubuntu.co.uk
 
 If you have Windows version 1803 or greater (and don't want an easy to use Linux system): [WSL 1](http://docs.uavaustin.org/guides/installation/getting-started/windows.html)
 
+#### Configuring Kernel
+
+```shell
+sudo nano ~/.bashrc
+
+alias uav='cd /c/U'
+
+```
+
 ## Git
 Git is used for version control and some documentation of the code.
 
@@ -53,3 +62,33 @@ The tentative schedule of boot camp is as follows:
 - Day 4: Pathfinder and jumping off the deep end with Rust
 - Day 5: Microservices, networking, and revisiting the stack
 - Day 6: Buffer day (Probably needed, covering these topics is very important)
+
+---------------------
+
+wsl2
+
+IN
+
+sudo nano ~/.bashrc
+sudo nano ~/.bash_profile
+
+alias <name>='cd <folder location>'
+
+TO SAVE/EXIT:
+
+ctrl+x
+y
+enter
+
+---------------------
+
+sudo apt-get update
+sudo apt install curl
+sudo apt install git-all
+
+sudo apt-get install python3.6
+sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+------------------------
+
+git clone https://github.com/chaseguy15/Bootcamp.git
