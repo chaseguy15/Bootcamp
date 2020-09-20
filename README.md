@@ -48,6 +48,16 @@ Please repeat the above process for the .bash_profile file as well, using the sa
 ## Git
 Git is used for version control and some documentation of the code.
 
+To install Git run :
+
+
+```shell
+sudo apt update
+sudo apt-get install curl
+sudo apt-get install git-all
+```
+
+
 [UAV Austin Git install page](http://docs.uavaustin.org/guides/installation/git/index.html)
 
 ## Python
@@ -57,14 +67,18 @@ know, especially when learning programming.
 To install Python in a Linux kernel, run:
 
 ```shell
-sudo apt-get update
+sudo apt update
 sudo apt-get install python3.6
 ```
 
 ## Rust
 Rust is the language of Pathfinder and a great way to learn the fundamentals of programming which can often be overlooked with more dynamic languages.
 
-[Rust install](https://www.rust-lang.org/tools/install)
+To install Rust, run:
+
+```shell
+sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 - ["The Book"](https://doc.rust-lang.org/book/)
 - [By example](https://doc.rust-lang.org/stable/rust-by-example/index.html)
@@ -81,33 +95,3 @@ The tentative schedule of boot camp is as follows:
 - Day 4: Pathfinder and jumping off the deep end with Rust
 - Day 5: Microservices, networking, and revisiting the stack
 - Day 6: Buffer day (Probably needed, covering these topics is very important)
-
----------------------
-
-wsl2
-
-IN
-
-sudo nano ~/.bashrc
-sudo nano ~/.bash_profile
-
-alias <name>='cd <folder location>'
-
-TO SAVE/EXIT:
-
-ctrl+x
-y
-enter
-
----------------------
-
-sudo apt-get update
-sudo apt install curl
-sudo apt install git-all
-
-sudo apt-get install python3.6
-sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-------------------------
-
-git clone https://github.com/chaseguy15/Bootcamp.git
