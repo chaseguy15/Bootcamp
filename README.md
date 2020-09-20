@@ -19,12 +19,31 @@ If you have Windows version 1803 or greater (and don't want an easy to use Linux
 
 #### Configuring Kernel
 
-```shell
+To configure the kernel you will need to edit the bashrc and bash_profile files. These files hold information on your kernel setting. To do this, you will need to get and run nano, a command-line text editor. Run:
+
+```bash
+sudo apt update
+sudo apt-get install nano
 sudo nano ~/.bashrc
-
-alias uav='cd /c/U'
-
 ```
+
+This will open the .bashrc file within your root directory. We are now going to create an alias to jump to our working UAV directory. This saves us the hassle of moving directories all the time. Inside the file add the line:
+
+```bash
+alias uav='cd /c/Users/<your user>/Documents/UAV'
+```
+
+This makes it so that anytime you run "uav" in the kernel, bash reads "cd /c/Users/<your user>/Documents/UAV". This is what an alias does, lets you create custom inputs. The main command being used here is "cd" which stands for change directory. This is used to navigate the file system in unix and windows. If you would like, you can customize the directory and alias name from above to be whatever you like, as long as you have a way to quickly access your UAV folder.
+
+You are then going to want to exit, save, and name the file. While still in the nano editor, input:
+
+```bash
+ctrl+c
+y
+enter
+```
+
+Please repeat the above process for the .bash_profile file as well, using the same alias if you changed it.
 
 ## Git
 Git is used for version control and some documentation of the code.
