@@ -25,6 +25,8 @@ my_variable = 5 # Good practice: name variables with lower_snakecase
 logic_variable = True # Variables can take on any type
 string_variable = "characters"
 
+new_variable = 13
+
 MY_CONSTANT = 3 # Good practice: name constants in UPPER_SNAKECASE
 
 """
