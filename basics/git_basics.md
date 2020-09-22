@@ -5,9 +5,7 @@ To start using git, we are going to first need to get a repository. Please run:
 ```bash
 git clone <repo_url>
 ```
-with the url being: https://github.com/chaseguy15/Bootcamp.git
-
-This is how you download a remote repository from Github.
+with the url being: https://github.com/chaseguy15/Bootcamp.git in this case. This is how you download a remote repository from Github.
 
 When we want to update our local branch to make the upstream branch, we use:
 ```bash
