@@ -10,12 +10,12 @@ class autopilotMember:
         self.year = yr
         self.interests = ints
 
-# name = ""
-# major = ""
-# year = 0
-# interests = ""
+name = "Chase"
+major = "Aerospace"
+year = 4
+interests = "Programming, propulsion, anime, music"
 
-# you = autopilotMember(name, major, year, interests)
+you = autopilotMember(name, major, year, interests)
 
 print('Name: ', you.name)
 print('Major: ', you.major)
