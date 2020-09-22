@@ -51,13 +51,11 @@ Git is used for version control and some documentation of the code.
 To install Git run :
 
 
-```shell
+```bash
 sudo apt update
 sudo apt-get install curl
 sudo apt-get install git-all
 ```
-
-
 [UAV Austin Git install page](http://docs.uavaustin.org/guides/installation/git/index.html)
 
 ## Python
@@ -66,17 +64,19 @@ know, especially when learning programming.
 
 To install Python in a Linux kernel, run:
 
-```shell
+```bash
 sudo apt update
 sudo apt-get install python3.6
 ```
+
+For reference on the style of Python, please refer to [the Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 
 ## Rust
 Rust is the language of Pathfinder and a great way to learn the fundamentals of programming which can often be overlooked with more dynamic languages.
 
 To install Rust, run:
 
-```shell
+```bash
 sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
