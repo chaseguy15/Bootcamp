@@ -27,6 +27,8 @@ string_variable = "characters"
 
 new_variable = 13
 
+newer_variable = new_variable
+
 MY_CONSTANT = 3 # Good practice: name constants in UPPER_SNAKECASE
 
 """
@@ -52,9 +54,9 @@ for x in range(5):
     loops are useful when you don't know how long you want to iterate yet.
     """
 
-# x = 10
+x = 10
 while x > 0:
-    # print(x)
+    #print(x)
     x = x - 1
 
     """
@@ -63,10 +65,9 @@ while x > 0:
 
     if, else if, and else are the common calls for these statements.
     """
-#x = 0
+#x = 1
 
 #_y = 1
-
 '''
 if x == 0:
     _y = (x + 2) ** 2
@@ -78,6 +79,7 @@ else:
     print("x is neither zero nor four")
 '''
 
+
 #print(_y)
 
 """
@@ -85,19 +87,19 @@ Notice how each one of these operations creates an indent. This shows what is
 happening within the scope of the if statement
 """
 
-
 """
 ---------------------------------FUNCTIONS--------------------------------------
 """
 
-def my_function(x):
+def my_function(my_input):
     _y = x + 2 # Good practice: internal variables should start with a _
-    x = 5
-    print("during function", x)
+    my_input = 5
+
+    #print("during function", my_input)
     return _y
 
 def strings_only(input: str) -> str:
-    return "Good job, that was a srting"
+    return "Good job, that was a string"
 """
 A function, used often to do operation on many different inputs.
 In python, a function is denoted by "def" and the output is given by "return".
@@ -109,9 +111,9 @@ precede any call to that type.
 """
 
 my_input = 3
-print("before function:", my_input)
+#print("before function:", my_input)
 my_output = my_function(my_input) # A function call to operate on "my_input"
-print("after function:", my_input)
+
 
 """
 Notice how my_input goes back to its original value despite it changing in the
@@ -130,8 +132,10 @@ class myClass: #Good practice: name classes in lowerCamelCase
         self.data1 = arg1
         self.data2 = arg2
 
+
+
 """
-Classes are user-defined obects, allowing for code scalability.
+Classes are user-defined objects, allowing for code scalability.
 
 While there is a lot to explore with classes, for now just know that they are a
 sort of "container" of different data which can be called to create instances,
@@ -153,3 +157,7 @@ class myOtherClass:
 
     def difference_of_data2(self, x):
         return self.data2 - x
+
+class1 = myOtherClass(4, 5, 8)
+x = class1.difference_of_data2(3)
+print(x)

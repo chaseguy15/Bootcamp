@@ -10,6 +10,9 @@ class autopilotMember:
         self.year = yr
         self.interests = ints
 
+    def get_major(self):
+        return self.major
+
 name = "Chase"
 major = "Aerospace"
 year = 4
@@ -17,7 +20,11 @@ interests = "Programming, propulsion, anime, music"
 
 you = autopilotMember(name, major, year, interests)
 
+"""
 print('Name: ', you.name)
 print('Major: ', you.major)
 print('Year: ', you.year)
 print('Interests: ', you.interests)
+"""
+
+print(you.get_major())
