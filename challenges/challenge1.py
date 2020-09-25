@@ -7,10 +7,13 @@ Once you have completed the challenge, please push this to your remote branch.
 """
 
 # TODO: Create function
-
-
+def print_n_times(x, n):
+    for i in range(n):
+        print x
 
 # TODO: Test function
+## test values ##
+x = 3
+n = 5
 
-#x =
-#n =
+print_n_times(x, n)
