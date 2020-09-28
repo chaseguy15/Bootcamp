@@ -52,19 +52,16 @@ def findPaths(first_obstacle: obstacle, second_obstacle: obstacle):
     intersections =  find_intersect(internal, middle)
 
     if intersections is not None:
-        projected = project_line(intersections[0], larger)
-        first_point = projected[1][0]
-        second_point = projected[1][1]
-        slope = projected[0]
-        closest = point()
-        # finding distance between points
-        first_dist = ((first_point.x - smaller.center.x)**2 + (first_point.y - smaller.center.y)**2) ** 0.5
-        second_dist = ((second_point.x - smaller.center.x)**2 + (second_point.y - smaller.center.y)**2) ** 0.5
 
-        if first_dist > second_dist:
-            closest = second_point
-        else:
-            closest = first_point
+        # first point
+        first_projection = project_line(intersections[0], larger)
+        first_path = find_path(first_projection, smaller, larger)
+
+        second_projection = project_line(intersections[1], larger)
+        second_path = find_path(second_projection, smaller, larger)
+
+        return first_path, second_path
+    return None
 
 
 
@@ -104,11 +101,34 @@ def project_line(first: point, second: obstacle):
 
     return slope, (first_intersect, second_intersect)
 
+def find_path(projected, smaller: obstacle, larger: obstacle):
+    first_point = projected[1][0]
+    second_point = projected[1][1]
+    slope = projected[0]
+    closest = point()
+    # finding distance between points
+    first_dist = ((first_point.x - smaller.center.x) ** 2 + (first_point.y - smaller.center.y) ** 2) ** 0.5
+    second_dist = ((second_point.x - smaller.center.x) ** 2 + (second_point.y - smaller.center.y) ** 2) ** 0.5
 
+    if first_dist > second_dist:
+        closest = second_point
+    else:
+        closest = first_point
+
+    slope = - 1 / slope
+
+
+    y_val = (slope * (smaller.center.x - closest.x + slope * smaller.center.y) + closest.y)/(slope**2 + 1)
+    x_val = ((y_val - closest.y) / m) + closest.x
+
+    found_point = point(x_val, y_val)
+
+    return closest, found_point
 
 obstacle1 = obstacle(3.0, point(1.0,1.0))
 obstacle2 = obstacle(5, point(3.0,9.0))
 
+paths = findPaths(obstacle1, obstacle2)
 
-path1 = #(point1, point2)
-path2 = #(point3, point4)
+path1 = paths[0]
+path2 = paths[1]
