@@ -57,6 +57,7 @@ class solvePath:
         distY = self.o2Y - self.o1Y
         self.megaCircleRadius = distX**2 + distY**2
         self.megaCircleRadius = math.sqrt(self.megaCircleRadius)
+        #debugging stuff
         print("\n The radius of the larger circle is: " + str(self.megaCircleRadius))
         if (self.megaCircleRadius==0):
             print("\nSomething's wrong since radius is 0")
@@ -64,14 +65,18 @@ class solvePath:
     def calcCenterPoint(self):
         spotX = (self.o2X - self.o1X)/2.0 + self.o1X
         spotY = (self.o2Y - self.o1Y)/2.0 +self.o1Y
-        megaCircleCenter = (spotX, spotY)
+        self.megaCircleCenter = point(spotX, spotY)
+        print("centerP: " + str(self.megaCircleCenter))
 
     def calcIntersectionWithObstOne(self):
         self.calcMegaRadius()
         self.calcCenterPoint()
-        dBtwn = (self.megaCircleCenter.getX() - self.o1X)**2 + (self.megaCircleCenter.getY() - self.o1Y)**2
+        dBtwn = (self.megaCircleCenter.getX() - self.o1X)**2
+        print ("xdbtw: " + str(dBtwn))
+        dBtwn = dBtwn + (self.megaCircleCenter.getY() - self.o1Y)**2
         dBtwn = math.sqrt(dBtwn)
-        t1a = (self.o1R**2 - self.o2R**2 + dBtwn**2)/(2*dBtwn)
+        print("Distance betweenis" + str(dBtwn))
+        t1a = (self.o1R**2 - self.megaCircleRadius**2 + dBtwn**2)/(2*dBtwn)
         hTP = (self.o1R**2) - (t1a**2)
         print("htp is: " + str(hTP))
         hTP = math.sqrt(hTP)
@@ -92,7 +97,7 @@ class solvePath:
         self.calcCenterPoint()
         dBtwn = (self.megaCircleCenter.getX() - self.o2X)**2 + (self.megaCircleCenter.getY() - self.o2Y)**2
         dBtwn = math.sqrt(dBtwn)
-        t1a = (self.o1R**2 - self.o2R**2 + dBtwn**2)/(2*dBtwn)
+        t1a = (self.o2R**2 - self.megaCircleRadius**2 + dBtwn**2)/(2*dBtwn)
         hTP = (self.o2R**2) - (t1a**2)
         hTP = math.sqrt(hTP)
         tempProp = t1a/dBtwn
